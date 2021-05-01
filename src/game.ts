@@ -12,8 +12,6 @@ mvdr();
 function door(){
 const door = new Entity(); 
 engine.addEntity(door);
-
-
 door.addComponent(new GLTFShape("models/Door/door.glb"));
 door.addComponent(new Transform({ position: new Vector3(10, 0, 20) }));
 let StartPos = new Vector3(10, 0, 20);
@@ -30,3 +28,11 @@ door.addComponent(
 );
 }
 door();
+
+function button1() {
+  const button1 = new Entity();
+  engine.addEntity(button1);
+  button1.addComponent(new GLTFShape("models/Buttons/button1.glb"))
+  button1.addComponent(new Transform({ position: new Vector3(10,0,20)}));
+}
+button1();
