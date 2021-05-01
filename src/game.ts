@@ -1,3 +1,6 @@
+import * as utils from '@dcl/ecs-scene-utils'
+
+
 
 
 const baseScene = new Entity();
