@@ -33,6 +33,6 @@ function button1() {
   const button1 = new Entity();
   engine.addEntity(button1);
   button1.addComponent(new GLTFShape("models/Buttons/button1.glb"))
-  button1.addComponent(new Transform({ position: new Vector3(10,0,20)}));
+  button1.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
 }
 button1();
