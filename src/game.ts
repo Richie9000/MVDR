@@ -15,18 +15,17 @@ engine.addEntity(door);
 door.addComponent(new GLTFShape("models/Door/door.glb"));
 door.addComponent(new Transform({ position: new Vector3(10, 0, 20) }));
 let StartPos = new Vector3(10, 0, 20);
-let EndPos = new Vector3(10.5, 2.5, 20);
+let EndPos = new Vector3(9.9, 2.4, 20);
 let isDoorOpen = false;
 door.addComponent(
   new OnClick((): void => {
     if (!isDoorOpen) {
       isDoorOpen = true;
-      door.addComponent(new utils.MoveTransformComponent(StartPos, EndPos, 1, () => {
-        door.addComponent(new utils.MoveTransformComponent(EndPos, StartPos, 13))
-      }))
-    }
-  })
-);
+      door.addComponent(new utils.MoveTransformComponent(StartPos, EndPos, 2))
+      }
+    
+  }))
+
 }
 door();
 
