@@ -36,3 +36,19 @@ function button1() {
   button1.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
 }
 button1();
+
+function button2() {
+  const button2 = new Entity();
+  engine.addEntity(button2);
+  button2.addComponent(new GLTFShape("models/Buttons/button2.glb"))
+  button2.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
+}
+button2();
+
+function button3() {
+  const button3 = new Entity();
+  engine.addEntity(button3);
+  button3.addComponent(new GLTFShape("models/Buttons/button3.glb"))
+  button3.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
+}
+button3();
