@@ -36,7 +36,7 @@ door.addComponent(
   button1.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
   button1.addComponent(new OnClick((): void =>{
     door.addComponent(new utils.MoveTransformComponent(EndPos, StartPos, 2))
-
+    isDoorOpen = false;
   }))
 //}
 //button1();
