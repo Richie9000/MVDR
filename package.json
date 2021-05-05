@@ -13,6 +13,9 @@
   "devDependencies": {
     "decentraland-ecs": "latest"
   },
+  "requiredPermissions": [
+    "ALLOW_TO_MOVE_PLAYER_INSIDE_SCENE"
+  ],
   "dependencies": {
     "@dcl/ecs-scene-utils": "^1.6.1",
     "decentraland-ecs-utils": "^1.5.2"

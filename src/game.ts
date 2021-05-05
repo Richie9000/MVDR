@@ -1,4 +1,5 @@
 import * as utils from '@dcl/ecs-scene-utils'
+import { movePlayerTo } from '@decentraland/RestrictedActions'
 
 
 function mvdr() {
@@ -42,6 +43,16 @@ function button2() {
   engine.addEntity(button2);
   button2.addComponent(new GLTFShape("models/Buttons/button2.glb"))
   button2.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
+  
+  button2.addComponent(
+    new OnClick(():
+      void => {
+        movePlayerTo({ x: 1, y: 0, z: 1 }, { x: 4, y: 4, z: 4 })
+      },
+      { hoverText: "Move player" }
+    )
+  )
+  
 }
 button2();
 
@@ -52,3 +63,4 @@ function button3() {
   button3.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
 }
 button3();
+
