@@ -9,7 +9,7 @@ baseScene.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
 }
 mvdr();
 
-function door(){
+//function door(){
 const door = new Entity(); 
 engine.addEntity(door);
 door.addComponent(new GLTFShape("models/Door/door.glb"));
@@ -26,16 +26,21 @@ door.addComponent(
     
   }))
 
-}
-door();
+//}
+//door();
 
-function button1() {
+//function button1() {
   const button1 = new Entity();
   engine.addEntity(button1);
   button1.addComponent(new GLTFShape("models/Buttons/button1.glb"))
   button1.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
-}
-button1();
+  button1.addComponent(new OnClick((): void =>{
+    door.addComponent(new utils.MoveTransformComponent(EndPos, StartPos, 2))
+
+  }))
+//}
+//button1();
+ 
 
 function button2() {
   const button2 = new Entity();
