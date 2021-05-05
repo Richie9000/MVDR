@@ -15,6 +15,9 @@
     ],
     "base": "0,0" 
   },
+  "requiredPermissions": [
+    "ALLOW_TO_MOVE_PLAYER_INSIDE_SCENE"
+  ],
   "communications": {
     "type": "webrtc",
     "signalling": "https://signalling-01.decentraland.org"

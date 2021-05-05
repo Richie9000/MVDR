@@ -45,8 +45,8 @@ function button2() {
   button2.addComponent(new Transform({ position: new Vector3(10, 0, 20)}));
   
   button2.addComponent(
-    new OnClick(():
-      void => {
+    new OnPointerDown(
+      (e) => {
         movePlayerTo({ x: 1, y: 0, z: 1 }, { x: 4, y: 4, z: 4 })
       },
       { hoverText: "Move player" }
